@@ -1,0 +1,4 @@
+action: pycodestyle, msg: envreport
+cwd: /home/student/Downloads/new/02
+cmd: /home/student/Downloads/new/02/.tox/pycodestyle/bin/python -m pip freeze
+pycodestyle==2.5.0

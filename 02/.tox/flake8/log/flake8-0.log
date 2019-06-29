@@ -1,0 +1,9 @@
+action: flake8, msg: getenv
+cwd: /home/student/Downloads/new/02/.tox
+cmd: /home/student/.pyenv/versions/3.7.3/bin/python3.7 -m virtualenv --no-download --python /home/student/.pyenv/versions/3.7.3/bin/python3.7 flake8
+Already using interpreter /home/student/.pyenv/versions/3.7.3/bin/python3.7
+Using base prefix '/home/student/.pyenv/versions/3.7.3'
+New python executable in /home/student/Downloads/new/02/.tox/flake8/bin/python3.7
+Also creating executable in /home/student/Downloads/new/02/.tox/flake8/bin/python
+Installing setuptools, pip, wheel...
+done.

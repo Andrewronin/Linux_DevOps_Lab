@@ -1,0 +1,8 @@
+action: flake8, msg: envreport
+cwd: /home/student/Downloads/new/02
+cmd: /home/student/Downloads/new/02/.tox/flake8/bin/python -m pip freeze
+entrypoints==0.3
+flake8==3.7.1
+mccabe==0.6.1
+pycodestyle==2.5.0
+pyflakes==2.1.1
