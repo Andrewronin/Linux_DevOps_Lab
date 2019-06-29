@@ -1,7 +1,0 @@
-action: pycodestyle, msg: getenv
-cwd: /home/student/Downloads/new/02
-cmd: /home/student/Downloads/new/02/.tox/pycodestyle/bin/pip install pycodestyle==2.5.0
-Collecting pycodestyle==2.5.0
-  Using cached https://files.pythonhosted.org/packages/0e/0c/04a353e104d2f324f8ee5f4b32012618c1c86dd79e52a433b64fceed511b/pycodestyle-2.5.0-py2.py3-none-any.whl
-Installing collected packages: pycodestyle
-Successfully installed pycodestyle-2.5.0
