@@ -1,0 +1,11 @@
+{
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "live-restore": true,
+  "metrics-addr" : "0.0.0.0:9323",
+  "experimental" : true,
+  "data-root": "/var/lib/docker-root",
+  "log-driver": "journald",
+  "hosts": ["unix:///var/run/docker.sock", 
+             "tcp://0.0.0.0:2375"]
+}
+

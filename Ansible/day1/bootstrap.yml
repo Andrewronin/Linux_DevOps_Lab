@@ -1,0 +1,33 @@
+- name: Bootstrap
+  hosts: all
+  become: true
+
+  vars:
+    USER: devops
+    GROUP: devops 
+    PATH: /home/student/ansible/day1/
+  
+  tasks:
+  - name: Create group
+    group:
+      name: "{{GROUP}}"
+      state: present
+
+  - name: Create user
+    user:
+      name: "{{USER}}"
+      group: "{{GROUP}}"
+      append: yes
+
+  - name: Set authorized key taken from file
+    authorized_key:
+      user: "{{USER}}"
+      state: present
+      key: "{{ lookup('file', '{{PATH}}devops.pub') }}"
+
+  - name: Add devops user to the sudoers
+    copy:
+      dest: "/etc/sudoers.d/{{USER}}"
+      content: "{{USER}}  ALL=(ALL)  NOPASSWD: ALL"
+      backup: yes
+      validate: /usr/sbin/visudo -cf %s

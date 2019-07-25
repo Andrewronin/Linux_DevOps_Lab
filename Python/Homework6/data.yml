@@ -1,0 +1,12 @@
+apache_vhosts:
+ - servername: www.domain.tld
+   documentroot: /www/domain
+   serveradmin: www-admin@foo.example.com
+   directorypath: /usr/local/httpd/htdocs
+ - servername: www.domain2.tld
+   documentroot: /www/domain2
+   directorypath: /usr/local2/httpd/htdocs
+ - servername: www.domain3.tld
+   documentroot: /www/domain3
+   serveradmin: www-admin@foo.example3.com
+   directorypath: /usr/local3/httpd/htdocs

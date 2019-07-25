@@ -1,0 +1,239 @@
+- name: start 
+  hosts: localhost
+  gather_facts: yes
+  strategy: debug
+
+
+  tasks:
+  - name: Add host 192.168.56.225 to in-memory inventory
+    add_host:
+      name: '192.168.56.225'
+      groups: host
+
+- name: Provision VM
+  hosts: host
+  become: yes
+  
+  tasks:
+  - name: yum update
+    yum:
+      name: '*'
+      state: latest
+
+  - name: install pre-docker    
+    yum:
+      name: 
+        - "yum-utils"
+        - "device-mapper-persistent-data"
+        - "lvm2"
+          
+  
+  - name: Add Docker repo
+    get_url:
+      url: https://download.docker.com/linux/centos/docker-ce.repo
+      dest: /etc/yum.repos.d/docer-ce.repo
+
+  - name: Enable Docker Edge repo
+    ini_file:
+      dest: /etc/yum.repos.d/docer-ce.repo
+      section: 'docker-ce-edge'
+      option: enabled
+      value: 0
+
+  - name: Enable Docker Test repo
+    ini_file:
+      dest: /etc/yum.repos.d/docer-ce.repo
+      section: 'docker-ce-test'
+      option: enabled
+      value: 0
+
+  - name: install docker    
+    yum:
+      name:   
+        - "docker-ce"
+        - "docker-ce-cli"
+        - "containerd.io"
+
+  - name: Add user vagrant to docker group
+    user:
+      name: vagrant
+      groups: docker
+      append: yes
+
+
+  - name: install prepackages    
+    yum:
+      name: 
+        - ntp
+        - net-tools
+        - bind-utils
+        - moreutils
+
+  - name: enable service ntpd
+    systemd:
+      name: ntpd
+      state: started
+      enabled: yes
+
+  - name: disable selinux
+    shell: getenforce | grep Disabled || setenforce 0
+
+  - name: disable selinux
+    copy:
+      content: "SELINUX=disabled"
+      dest: /etc/sysconfig/selinux
+
+  - name: Remove swapfile from /etc/fstab
+    mount:
+      name: "{{ item }}"
+      fstype: swap
+      state: absent
+    with_items:
+      - swap
+      - none
+
+  - name: Disable swap
+    command: swapoff -a
+    when: ansible_swaptotal_mb > 0
+
+  - name: Creating  Directory
+    file:
+      path: /etc/docker
+      state: directory
+
+  - name: Copy exec-opts
+    copy:
+      dest: /etc/docker/daemon.json 
+      content: |
+        {
+        "exec-opts": [
+        "native.cgroupdriver=systemd"
+        ]
+        }
+
+  - name: Copy IP info for docker
+    copy:
+      dest: /etc/sysctl.d/docker.conf  
+      content: |
+        net.bridge.bridge-nf-call-ip6tables = 1
+        net.bridge.bridge-nf-call-iptables = 1
+
+  - name: iptables config
+    shell: sysctl --system
+
+  - name: add Kubernetes' YUM repository
+    yum_repository:
+      name: Kubernetes
+      description: Kubernetes YUM repository
+      baseurl: https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+      gpgkey: https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+      gpgcheck: yes
+
+  - name: install packages    
+    yum:
+      name: 
+        - kubelet
+        - kubeadm
+        - kubectl
+        - kubernetes-cni
+
+  - name: just force systemd to reread configs
+    systemd:
+      daemon_reload: yes
+
+  - name: enable service docker
+    systemd:
+      name: docker
+      state: started
+      enabled: yes
+
+
+
+  - name: sysconfig kubelet
+    shell: sed -i "s/\(KUBELET_EXTRA_ARGS=\).*/\1--node-ip=$(hostname -I | awk '{print $2}')/" /etc/sysconfig/kubelet
+
+  - name: enable service kubelet
+    systemd:
+      name: kubelet
+      state: restarted
+      enabled: yes
+
+  - name: kubeagm init
+    shell: kubeadm init --pod-network-cidr 10.244.0.0/16 --apiserver-advertise-address 192.168.56.225 --token abcdef.0123456789abcdef
+
+  - name: Creating  Directory /.kube
+    file:
+      path: /home/vagrant/.kube
+      state: directory
+  - name: Creating  Directory /.kube
+    file:
+      path: /root/.kube
+      state: directory
+
+  - name: Copy config file
+    shell: export KUBECONFIG=/etc/kubernetes/admin.conf
+
+  - name: Copy config file
+    copy:
+      src: /etc/kubernetes/admin.conf
+      dest: /home/vagrant/.kube/config
+      remote_src: yes
+
+  - name: Copy config file
+    copy:
+      src: /etc/kubernetes/admin.conf
+      dest: /root/.kube/config
+      remote_src: yes
+
+  - name: apply flannel
+    shell: kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/62e44c867a2846fefb68bd5f178daf4da3095ccb/Documentation/kube-flannel.yml
+
+  - name: patch flannel
+    shell: >
+      kubectl patch daemonsets kube-flannel-ds-amd64 -n kube-system --patch='{
+        "spec":{
+          "template":{
+            "spec":{
+              "containers":[
+                {
+                  "name": "kube-flannel",
+                  "args": [
+                    "--ip-masq",
+                    "--kube-subnet-mgr",
+                    "--iface=eth1"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }'
+
+  - name: remove isolation
+    shell: kubectl taint nodes --all node-role.kubernetes.io/master-
+
+  - name: install metallb
+    shell: kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.8.0/manifests/metallb.yaml
+
+  - name: patch metallb
+    shell: |
+      cat <<EOF | kubectl apply -f -
+      apiVersion: v1
+      kind: ConfigMap
+      metadata:
+        namespace: metallb-system
+        name: config
+      data:
+        config: |
+          address-pools:
+          - name: default
+            protocol: layer2
+            addresses:
+            - 192.168.56.240/28
+      EOF
+
+  - name: install ingress-nginx
+    shell: "{{item}}"
+    with_items:
+      - kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml
+      - kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud-generic.yaml

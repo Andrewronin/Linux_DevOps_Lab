@@ -1,0 +1,9 @@
+- name: Provision tomcat
+  hosts: appservers
+
+  roles:
+  - role: user
+    user_name: tomcat
+    user_id: 53
+
+  - role: tomcat  

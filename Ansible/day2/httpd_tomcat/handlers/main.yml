@@ -1,0 +1,9 @@
+---
+# handlers file for httpd_tomcat
+
+- name: restart apache
+  become: yes 
+  service:
+    name: httpd
+    state: restarted
+

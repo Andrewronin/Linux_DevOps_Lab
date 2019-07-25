@@ -1,0 +1,22 @@
+# tasks for testing
+
+- name: test java
+  shell: /usr/bin/java -version 2>&1 | grep version | sed 's/.*"\(.*\)".*/\1/g'
+  register: java_out
+  failed_when: java_fact  != java_out.stdout
+  when: (test=="tomcat") or (test=="java")
+
+- name: test tomcat
+  shell: /opt/apache-tomcat-8.5.42/bin/version.sh | grep "Apache Tomcat" | sed 's/[^0-9._]//g'
+  become: yes
+  register: tomcat_out
+  failed_when: tomcat_fact  != tomcat_out.stdout
+  when: (test=="tomcat") or (test=="java")
+
+- name: test httpd
+  shell: /usr/sbin/httpd -version | grep Apache | sed 's/[^0-9._]//g'
+  register: httpd_out
+  failed_when: httpd_fact  != httpd_out.stdout
+  when: test=="httpd"
+
+    

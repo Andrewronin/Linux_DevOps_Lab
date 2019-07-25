@@ -1,0 +1,36 @@
+- name: Playbook with import
+  import_playbook: import/import_inventory.yml
+  tags:
+  - always
+
+- name: facts directory
+  import_playbook: import/facts_playbook.yml
+
+- name: Create new DevOps user
+  import_playbook: import/user_playbook.yml
+  tags:
+  - never
+  - devops
+
+- name: Provision appservers
+  import_playbook: import/tomcat_playbook.yml
+  tags:
+  - app
+
+- name: Provision appservers
+  import_playbook: import/httpd_playbook.yml
+  tags:
+  - web
+
+- name: Testing infastructure from localhost
+  import_playbook: import/local_tests.yml
+  tags:
+  - sanity
+  - local_tests
+
+- name: Testing infastructure on nodes
+  import_playbook: import/remote_tests.yml
+  tags:
+  - sanity
+  - remote_tests
+

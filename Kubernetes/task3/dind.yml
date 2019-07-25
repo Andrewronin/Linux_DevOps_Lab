@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dind-deployment
+  labels:
+    app: dind
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dind
+  template:
+    metadata:
+      labels:
+        app: dind
+    spec:
+      containers:
+      - name: dind
+        image: docker:18.05-dind
+        securityContext:
+          privileged: true
+        ports:
+        - containerPort: 4444
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: dind-svc
+  labels:
+    app: dind
+spec:
+  ports:
+  - port: 80
+    targetPort: 4444
+  selector:
+    app: dind
+  type: LoadBalancer
+
+
+
+

@@ -1,0 +1,17 @@
+---
+# handlers file for tomcat
+
+- name: systemd daemon reload
+  become: yes
+  systemd: 
+    daemon_reload: yes
+
+- name: export tomcat results
+  become: yes
+  copy: 
+    content: >
+      {
+        "version": "{{ tomcat_version }}"
+      }
+    dest: /etc/ansible/facts.d/tomcat.fact
+

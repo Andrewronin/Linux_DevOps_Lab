@@ -1,0 +1,14 @@
+- name: In-memory inventory
+  hosts: localhost
+  strategy: debug
+  
+  tasks:
+  - name: Add host 1.2.3.4 to in-memory inventory
+    add_host:
+      name: '1.2.3.4'
+      groups: webservers
+
+  - name: Add host 1.2.3.5 to in-memory inventory
+    add_host:
+      name: '1.2.3.5'
+      groups: appservers

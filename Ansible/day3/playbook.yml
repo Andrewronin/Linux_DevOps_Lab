@@ -1,0 +1,95 @@
+- name: Main Playbook
+  hosts: localhost
+  gather_facts: yes
+  strategy: debug
+  
+  tasks:
+  - name: Add host 1.2.3.4 to in-memory inventory
+    add_host:
+      name: '1.2.3.4'
+      groups: webservers
+
+  - name: Add host 1.2.3.5 to in-memory inventory
+    add_host:
+      name: '1.2.3.5'
+      groups: appservers
+
+
+
+- name: Start Playbook
+  hosts: all
+  gather_facts: yes
+
+  pre_tasks:
+  - name: Creating Facts Directory
+    become: yes
+    file:
+      path: /etc/ansible/facts.d
+      recurse: yes
+      state: directory
+
+  roles: 
+  - role: user
+    user_name: devops
+    user_priv: " {{user_name}}  ALL=(ALL)  NOPASSWD: ALL \n Defaults:{{ user_name }} !requiretty \n"
+    user_auth_key: 
+    - "/home/student/ansible/day1/devops.pub"
+    - "/home/student/.ssh/id_rsa.pub"
+
+- name: provision tomcat
+  hosts: appservers
+  gather_facts: no
+  roles:
+  - role: user
+    user_name: tomcat
+    user_id: 53
+
+  - role: tomcat  
+
+  post_tasks:
+  - name: export tomcat results
+    become: yes
+    copy: 
+      content: >
+        {
+          "version": "{{ tomcat_version }}"
+        }
+      dest: /etc/ansible/facts.d/tomcat.fact
+    when: tomcat_output.changed == true 
+
+  - name: export java results
+    become: yes
+    copy: 
+      content: >
+        {
+          "version": "{{ java_version }}"
+        }
+      dest: /etc/ansible/facts.d/java.fact
+    when: java_output.changed == true 
+
+
+
+
+- name: provision httpd
+  hosts: webservers
+  gather_facts: no
+  
+  roles:
+  - role: httpd
+  - role: httpd_tomcat
+  
+  post_tasks:
+  - name: export httpd results
+    shell: /usr/sbin/httpd -version | grep Apache | sed 's/[^0-9._]//g'
+    register: httpd_version
+    when: httpd_output.changed == true
+
+  - name: export httpd results
+    become: yes
+    copy: 
+      content: >
+        {
+          "version": "{{ httpd_version.stdout }}"
+        }
+      dest: /etc/ansible/facts.d/httpd.fact
+    when: httpd_output.changed == true

@@ -1,0 +1,1618 @@
+2019-06-14 11:05:38
+Full thread dump OpenJDK 64-Bit Server VM (25.212-b04 mixed mode):
+
+"Thread-40" #88 daemon prio=5 os_prio=0 tid=0x00007f619c260800 nid=0x18a1 waiting for monitor entry [0x00007f618dedf000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee0790> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee07a0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-39" #87 daemon prio=5 os_prio=0 tid=0x00007f619c25f000 nid=0x18a0 waiting for monitor entry [0x00007f618dfe0000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee07a0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee0790> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-38" #86 daemon prio=5 os_prio=0 tid=0x00007f61c8010800 nid=0x189f waiting for monitor entry [0x00007f618e0e1000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee0ad0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee0ae0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-37" #85 daemon prio=5 os_prio=0 tid=0x00007f61c800e800 nid=0x189e waiting for monitor entry [0x00007f618e1e2000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee0ae0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee0ad0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-36" #84 daemon prio=5 os_prio=0 tid=0x00007f61cc009800 nid=0x189d waiting for monitor entry [0x00007f618e2e3000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee0e10> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee0e20> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-35" #83 daemon prio=5 os_prio=0 tid=0x00007f61cc007800 nid=0x189c waiting for monitor entry [0x00007f618e3e4000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee0e20> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee0e10> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-34" #82 daemon prio=5 os_prio=0 tid=0x00007f61bc00f800 nid=0x189b waiting for monitor entry [0x00007f618e4e5000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee1150> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee1160> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-33" #81 daemon prio=5 os_prio=0 tid=0x00007f61bc00e000 nid=0x189a waiting for monitor entry [0x00007f618e5e6000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee1160> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee1150> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-32" #80 daemon prio=5 os_prio=0 tid=0x00007f61b4107000 nid=0x1899 waiting for monitor entry [0x00007f618e6e7000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee1490> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee14a0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-31" #79 daemon prio=5 os_prio=0 tid=0x00007f61b4105000 nid=0x1898 waiting for monitor entry [0x00007f618e7e8000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee14a0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee1490> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-30" #78 daemon prio=5 os_prio=0 tid=0x00007f61b81da000 nid=0x1897 waiting for monitor entry [0x00007f618e8e9000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee17d0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee17e0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-29" #77 daemon prio=5 os_prio=0 tid=0x00007f61b8489800 nid=0x1896 waiting for monitor entry [0x00007f618e9ea000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee17e0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee17d0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-28" #76 daemon prio=5 os_prio=0 tid=0x00007f61ac008800 nid=0x1895 waiting for monitor entry [0x00007f618eaeb000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee1b10> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee1b20> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-27" #75 daemon prio=5 os_prio=0 tid=0x00007f61ac006800 nid=0x1894 waiting for monitor entry [0x00007f618ebec000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee1b20> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee1b10> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-26" #74 daemon prio=5 os_prio=0 tid=0x00007f61b003d800 nid=0x1893 waiting for monitor entry [0x00007f618eced000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee1e50> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee1e60> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-25" #73 daemon prio=5 os_prio=0 tid=0x00007f61b003c000 nid=0x1892 waiting for monitor entry [0x00007f618edee000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee1e60> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee1e50> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-24" #72 daemon prio=5 os_prio=0 tid=0x00007f61a4007000 nid=0x1891 waiting for monitor entry [0x00007f618eeef000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee2190> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee21a0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-23" #71 daemon prio=5 os_prio=0 tid=0x00007f61a4005000 nid=0x1890 waiting for monitor entry [0x00007f618eff0000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee21a0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee2190> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-22" #70 daemon prio=5 os_prio=0 tid=0x00007f61a8008800 nid=0x188f waiting for monitor entry [0x00007f618f0f1000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee24d0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee24e0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-21" #69 daemon prio=5 os_prio=0 tid=0x00007f61a8001800 nid=0x188e waiting for monitor entry [0x00007f618f1f2000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee24e0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee24d0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-20" #68 daemon prio=5 os_prio=0 tid=0x00007f619c120800 nid=0x188d waiting for monitor entry [0x00007f618f2f3000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee2810> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee2820> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-19" #67 daemon prio=5 os_prio=0 tid=0x00007f619c120000 nid=0x188c waiting for monitor entry [0x00007f618f3f4000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee2820> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee2810> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-18" #66 daemon prio=5 os_prio=0 tid=0x00007f61c800c000 nid=0x188b waiting for monitor entry [0x00007f618f4f5000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee2b50> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee2b60> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-17" #65 daemon prio=5 os_prio=0 tid=0x00007f61c800a000 nid=0x188a waiting for monitor entry [0x00007f618f5f6000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee2b60> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee2b50> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-16" #64 daemon prio=5 os_prio=0 tid=0x00007f61cc005000 nid=0x1889 waiting for monitor entry [0x00007f618f6f7000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee2e90> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee2ea0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-15" #63 daemon prio=5 os_prio=0 tid=0x00007f61cc003800 nid=0x1888 waiting for monitor entry [0x00007f618f7f8000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee2ea0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee2e90> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-14" #62 daemon prio=5 os_prio=0 tid=0x00007f61bc006000 nid=0x1887 waiting for monitor entry [0x00007f618f8f9000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee31d0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee31e0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-13" #61 daemon prio=5 os_prio=0 tid=0x00007f61bc004800 nid=0x1886 waiting for monitor entry [0x00007f618f9fa000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee31e0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee31d0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-12" #60 daemon prio=5 os_prio=0 tid=0x00007f61b42e2800 nid=0x1885 waiting for monitor entry [0x00007f618fafb000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee3510> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee3520> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-11" #59 daemon prio=5 os_prio=0 tid=0x00007f61b42e1000 nid=0x1884 waiting for monitor entry [0x00007f618fbfc000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee3520> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee3510> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-10" #58 daemon prio=5 os_prio=0 tid=0x00007f61b8327000 nid=0x1883 waiting for monitor entry [0x00007f618fcfd000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee3850> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee3860> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-9" #57 daemon prio=5 os_prio=0 tid=0x00007f61b84b6800 nid=0x1882 waiting for monitor entry [0x00007f618fdfe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee3860> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee3850> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-8" #56 daemon prio=5 os_prio=0 tid=0x00007f61ac005000 nid=0x1881 waiting for monitor entry [0x00007f619acce000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee3b90> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee3ba0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-7" #55 daemon prio=5 os_prio=0 tid=0x00007f61ac004800 nid=0x1880 waiting for monitor entry [0x00007f6198cb0000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee3ba0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee3b90> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Attach Listener" #54 daemon prio=9 os_prio=0 tid=0x00007f61bc001000 nid=0x187c waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"JMX server connection timeout 52" #52 daemon prio=5 os_prio=0 tid=0x00007f61941a0000 nid=0x1860 in Object.wait() [0x00007f61989ad000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at com.sun.jmx.remote.internal.ServerCommunicatorAdmin$Timeout.run(ServerCommunicatorAdmin.java:168)
+	- locked <0x00000000f62615d8> (a [I)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI TCP Connection(2)-192.168.33.1" #51 daemon prio=5 os_prio=0 tid=0x00007f61a4001800 nid=0x185f runnable [0x00007f6198aad000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x00000000f6261a88> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:555)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$7/915037206.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- <0x00000000f6261bc8> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"RMI Scheduler(0)" #50 daemon prio=5 os_prio=0 tid=0x0000000001243800 nid=0x185e waiting on condition [0x00007f6198baf000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f5ada570> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"ajp-nio-8009-AsyncTimeout" #47 daemon prio=5 os_prio=0 tid=0x00007f61e434d000 nid=0x185c waiting on condition [0x00007f6198db1000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at org.apache.coyote.AbstractProtocol$AsyncTimeout.run(AbstractProtocol.java:1151)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"ajp-nio-8009-Acceptor-0" #46 daemon prio=5 os_prio=0 tid=0x00007f61e434a800 nid=0x185b runnable [0x00007f6198eb2000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.ServerSocketChannelImpl.accept0(Native Method)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:422)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:250)
+	- locked <0x00000000f5ed38c8> (a java.lang.Object)
+	at org.apache.tomcat.util.net.NioEndpoint$Acceptor.run(NioEndpoint.java:482)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"ajp-nio-8009-ClientPoller-1" #45 daemon prio=5 os_prio=0 tid=0x00007f61e4348800 nid=0x185a runnable [0x00007f6198fb3000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:93)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	- locked <0x00000000f6262380> (a sun.nio.ch.Util$3)
+	- locked <0x00000000f6262390> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x00000000f6262338> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at org.apache.tomcat.util.net.NioEndpoint$Poller.run(NioEndpoint.java:825)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"ajp-nio-8009-ClientPoller-0" #44 daemon prio=5 os_prio=0 tid=0x00007f61e4347000 nid=0x1859 runnable [0x00007f61990b4000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:93)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	- locked <0x00000000f62625d8> (a sun.nio.ch.Util$3)
+	- locked <0x00000000f62625e8> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x00000000f6262590> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at org.apache.tomcat.util.net.NioEndpoint$Poller.run(NioEndpoint.java:825)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"ajp-nio-8009-exec-10" #43 daemon prio=5 os_prio=0 tid=0x00007f61e4345000 nid=0x1858 waiting on condition [0x00007f61991b5000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f62627a8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"ajp-nio-8009-exec-9" #42 daemon prio=5 os_prio=0 tid=0x00007f61e432a800 nid=0x1857 waiting on condition [0x00007f61992b6000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f62627a8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"ajp-nio-8009-exec-8" #41 daemon prio=5 os_prio=0 tid=0x00007f61e4328800 nid=0x1856 waiting on condition [0x00007f61993b7000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f62627a8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"ajp-nio-8009-exec-7" #40 daemon prio=5 os_prio=0 tid=0x00007f61e4326000 nid=0x1855 waiting on condition [0x00007f61994b8000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f62627a8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"ajp-nio-8009-exec-6" #39 daemon prio=5 os_prio=0 tid=0x00007f61e4324000 nid=0x1854 waiting on condition [0x00007f61995b9000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f62627a8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"ajp-nio-8009-exec-5" #38 daemon prio=5 os_prio=0 tid=0x00007f61e4323000 nid=0x1853 waiting on condition [0x00007f61996ba000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f62627a8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"ajp-nio-8009-exec-4" #37 daemon prio=5 os_prio=0 tid=0x00007f61e442d000 nid=0x1852 waiting on condition [0x00007f61997bb000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f62627a8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"ajp-nio-8009-exec-3" #36 daemon prio=5 os_prio=0 tid=0x00007f61e442b000 nid=0x1851 waiting on condition [0x00007f61998bc000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f62627a8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"ajp-nio-8009-exec-2" #35 daemon prio=5 os_prio=0 tid=0x00007f61e4429000 nid=0x1850 waiting on condition [0x00007f61999bd000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f62627a8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"ajp-nio-8009-exec-1" #34 daemon prio=5 os_prio=0 tid=0x00007f61e4427000 nid=0x184f waiting on condition [0x00007f6199abe000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f62627a8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-8080-AsyncTimeout" #33 daemon prio=5 os_prio=0 tid=0x00007f61e4446000 nid=0x184e waiting on condition [0x00007f6199bbf000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at org.apache.coyote.AbstractProtocol$AsyncTimeout.run(AbstractProtocol.java:1151)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-8080-Acceptor-0" #32 daemon prio=5 os_prio=0 tid=0x00007f61e4444000 nid=0x184d runnable [0x00007f6199cc0000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.ServerSocketChannelImpl.accept0(Native Method)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:422)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:250)
+	- locked <0x00000000f5ed37e0> (a java.lang.Object)
+	at org.apache.tomcat.util.net.NioEndpoint$Acceptor.run(NioEndpoint.java:482)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-8080-ClientPoller-1" #31 daemon prio=5 os_prio=0 tid=0x00007f61e4441800 nid=0x184c runnable [0x00007f6199dc1000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:93)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	- locked <0x00000000f6263f00> (a sun.nio.ch.Util$3)
+	- locked <0x00000000f6263f10> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x00000000f6263eb8> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at org.apache.tomcat.util.net.NioEndpoint$Poller.run(NioEndpoint.java:825)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-8080-ClientPoller-0" #30 daemon prio=5 os_prio=0 tid=0x00007f61e4440000 nid=0x184b runnable [0x00007f6199ec2000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:93)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	- locked <0x00000000f6264158> (a sun.nio.ch.Util$3)
+	- locked <0x00000000f6264168> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x00000000f6264110> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at org.apache.tomcat.util.net.NioEndpoint$Poller.run(NioEndpoint.java:825)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-8080-exec-10" #29 daemon prio=5 os_prio=0 tid=0x00007f61e443d800 nid=0x184a waiting on condition [0x00007f6199fc3000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f6227b40> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-8080-exec-9" #28 daemon prio=5 os_prio=0 tid=0x00007f61e45d2800 nid=0x1849 waiting on condition [0x00007f619a0c4000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f6227b40> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-8080-exec-8" #27 daemon prio=5 os_prio=0 tid=0x00007f61e45d0000 nid=0x1848 waiting on condition [0x00007f619a1c5000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f6227b40> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-8080-exec-7" #26 daemon prio=5 os_prio=0 tid=0x00007f61e45ce000 nid=0x1847 waiting on condition [0x00007f619a2c6000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f6227b40> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-8080-exec-6" #25 daemon prio=5 os_prio=0 tid=0x00007f61e45cc000 nid=0x1846 waiting on condition [0x00007f619a3c7000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f6227b40> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-8080-exec-5" #24 daemon prio=5 os_prio=0 tid=0x00007f61e4317800 nid=0x1845 waiting on condition [0x00007f619a4c8000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f6227b40> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-8080-exec-4" #23 daemon prio=5 os_prio=0 tid=0x00007f61e4315800 nid=0x1844 waiting on condition [0x00007f619a5c9000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f6227b40> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-8080-exec-3" #22 daemon prio=5 os_prio=0 tid=0x00007f61e4313800 nid=0x1843 waiting on condition [0x00007f619a6ca000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f6227b40> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-8080-exec-2" #21 daemon prio=5 os_prio=0 tid=0x00007f61e4312000 nid=0x1842 waiting on condition [0x00007f619a7cb000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f6227b40> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-8080-exec-1" #20 daemon prio=5 os_prio=0 tid=0x00007f61e4310800 nid=0x1841 waiting on condition [0x00007f619a8cc000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f6227b40> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"ContainerBackgroundProcessor[StandardEngine[Catalina]]" #19 daemon prio=5 os_prio=0 tid=0x00007f61e430a800 nid=0x1840 waiting on condition [0x00007f619a9cd000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1359)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"NioBlockingSelector.BlockPoller-2" #16 daemon prio=5 os_prio=0 tid=0x00007f61e4621800 nid=0x183d runnable [0x00007f619aed0000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:93)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	- locked <0x00000000f5eb41f0> (a sun.nio.ch.Util$3)
+	- locked <0x00000000f5eb4200> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x00000000f5eb41a8> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at org.apache.tomcat.util.net.NioBlockingSelector$BlockPoller.run(NioBlockingSelector.java:298)
+
+   Locked ownable synchronizers:
+	- None
+
+"NioBlockingSelector.BlockPoller-1" #15 daemon prio=5 os_prio=0 tid=0x00007f61e461f800 nid=0x183c runnable [0x00007f619afd1000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:93)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	- locked <0x00000000f5eb4428> (a sun.nio.ch.Util$3)
+	- locked <0x00000000f5eb4438> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x00000000f5eb43e0> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at org.apache.tomcat.util.net.NioBlockingSelector$BlockPoller.run(NioBlockingSelector.java:298)
+
+   Locked ownable synchronizers:
+	- None
+
+"GC Daemon" #14 daemon prio=2 os_prio=0 tid=0x00007f61e459d000 nid=0x183b in Object.wait() [0x00007f61c081b000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000000f5e2c748> (a sun.misc.GC$LatencyLock)
+	at sun.misc.GC$Daemon.run(GC.java:117)
+	- locked <0x00000000f5e2c748> (a sun.misc.GC$LatencyLock)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI TCP Accept-0" #13 daemon prio=5 os_prio=0 tid=0x00007f61e42f4800 nid=0x1839 runnable [0x00007f61c0e9a000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:545)
+	at java.net.ServerSocket.accept(ServerSocket.java:513)
+	at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:52)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI TCP Accept-9090" #12 daemon prio=5 os_prio=0 tid=0x00007f61e42ef800 nid=0x1838 runnable [0x00007f61c0f9b000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:545)
+	at java.net.ServerSocket.accept(ServerSocket.java:513)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI TCP Accept-0" #11 daemon prio=5 os_prio=0 tid=0x00007f61e42df000 nid=0x1837 runnable [0x00007f61c109c000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:545)
+	at java.net.ServerSocket.accept(ServerSocket.java:513)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"AsyncFileHandlerWriter-1625635731" #10 daemon prio=5 os_prio=0 tid=0x00007f61e41ef800 nid=0x1834 waiting on condition [0x00007f61c17d1000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000f5bd7b88> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.LinkedBlockingDeque.pollFirst(LinkedBlockingDeque.java:522)
+	at java.util.concurrent.LinkedBlockingDeque.poll(LinkedBlockingDeque.java:684)
+	at org.apache.juli.AsyncFileHandler$LoggerThread.run(AsyncFileHandler.java:160)
+
+   Locked ownable synchronizers:
+	- None
+
+"Service Thread" #7 daemon prio=9 os_prio=0 tid=0x00007f61e4118800 nid=0x1833 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C1 CompilerThread1" #6 daemon prio=9 os_prio=0 tid=0x00007f61e4115800 nid=0x1832 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C2 CompilerThread0" #5 daemon prio=9 os_prio=0 tid=0x00007f61e4113800 nid=0x1831 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=0 tid=0x00007f61e4106800 nid=0x1830 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Finalizer" #3 daemon prio=8 os_prio=0 tid=0x00007f61e40db000 nid=0x182f in Object.wait() [0x00007f61d423c000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	- locked <0x00000000f5bd83d8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+   Locked ownable synchronizers:
+	- None
+
+"Reference Handler" #2 daemon prio=10 os_prio=0 tid=0x00007f61e40d6000 nid=0x182e in Object.wait() [0x00007f61d433d000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	- locked <0x00000000f5bd8590> (a java.lang.ref.Reference$Lock)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+   Locked ownable synchronizers:
+	- None
+
+"main" #1 prio=5 os_prio=0 tid=0x00007f61e404c800 nid=0x182c runnable [0x00007f61eb40c000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:545)
+	at java.net.ServerSocket.accept(ServerSocket.java:513)
+	at org.apache.catalina.core.StandardServer.await(StandardServer.java:466)
+	at org.apache.catalina.startup.Catalina.await(Catalina.java:776)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:722)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:353)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:493)
+
+   Locked ownable synchronizers:
+	- None
+
+"VM Thread" os_prio=0 tid=0x00007f61e40cc800 nid=0x182d runnable 
+
+"VM Periodic Task Thread" os_prio=0 tid=0x00007f61e42f7800 nid=0x183a waiting on condition 
+
+JNI global references: 249
+
+
+Found one Java-level deadlock:
+=============================
+"Thread-40":
+  waiting to lock monitor 0x00007f61b00171e8 (object 0x00000000f0ee0790, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-39"
+"Thread-39":
+  waiting to lock monitor 0x00007f61a000cb78 (object 0x00000000f0ee07a0, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-40"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-40":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee0790> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee07a0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-39":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee07a0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee0790> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-38":
+  waiting to lock monitor 0x00007f61a000b628 (object 0x00000000f0ee0ad0, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-37"
+"Thread-37":
+  waiting to lock monitor 0x00007f61a000a028 (object 0x00000000f0ee0ae0, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-38"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-38":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee0ad0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee0ae0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-37":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee0ae0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee0ad0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-36":
+  waiting to lock monitor 0x00007f61a0008a28 (object 0x00000000f0ee0e10, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-35"
+"Thread-35":
+  waiting to lock monitor 0x00007f61e42bc9e8 (object 0x00000000f0ee0e20, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-36"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-36":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee0e10> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee0e20> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-35":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee0e20> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee0e10> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-34":
+  waiting to lock monitor 0x00007f61e42bb498 (object 0x00000000f0ee1150, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-33"
+"Thread-33":
+  waiting to lock monitor 0x00007f61e42b9e98 (object 0x00000000f0ee1160, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-34"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-34":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee1150> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee1160> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-33":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee1160> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee1150> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-32":
+  waiting to lock monitor 0x00007f61e42b8898 (object 0x00000000f0ee1490, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-31"
+"Thread-31":
+  waiting to lock monitor 0x00007f61bc016a38 (object 0x00000000f0ee14a0, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-32"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-32":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee1490> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee14a0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-31":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee14a0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee1490> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-30":
+  waiting to lock monitor 0x00007f61bc0154e8 (object 0x00000000f0ee17d0, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-29"
+"Thread-29":
+  waiting to lock monitor 0x00007f61bc013ee8 (object 0x00000000f0ee17e0, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-30"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-30":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee17d0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee17e0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-29":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee17e0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee17d0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-28":
+  waiting to lock monitor 0x00007f61bc0128e8 (object 0x00000000f0ee1b10, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-27"
+"Thread-27":
+  waiting to lock monitor 0x00007f61b0044778 (object 0x00000000f0ee1b20, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-28"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-28":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee1b10> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee1b20> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-27":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee1b20> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee1b10> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-26":
+  waiting to lock monitor 0x00007f61b0043228 (object 0x00000000f0ee1e50, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-25"
+"Thread-25":
+  waiting to lock monitor 0x00007f61b0041c28 (object 0x00000000f0ee1e60, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-26"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-26":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee1e50> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee1e60> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-25":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee1e60> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee1e50> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-24":
+  waiting to lock monitor 0x00007f61b0040628 (object 0x00000000f0ee2190, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-23"
+"Thread-23":
+  waiting to lock monitor 0x00007f61a0007228 (object 0x00000000f0ee21a0, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-24"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-24":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee2190> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee21a0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-23":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee21a0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee2190> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-22":
+  waiting to lock monitor 0x00007f61a0005cd8 (object 0x00000000f0ee24d0, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-21"
+"Thread-21":
+  waiting to lock monitor 0x00007f61a00046d8 (object 0x00000000f0ee24e0, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-22"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-22":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee24d0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee24e0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-21":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee24e0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee24d0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-20":
+  waiting to lock monitor 0x00007f61a00030d8 (object 0x00000000f0ee2810, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-19"
+"Thread-19":
+  waiting to lock monitor 0x00007f61e4295d58 (object 0x00000000f0ee2820, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-20"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-20":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee2810> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee2820> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-19":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee2820> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee2810> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-18":
+  waiting to lock monitor 0x00007f61e4294808 (object 0x00000000f0ee2b50, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-17"
+"Thread-17":
+  waiting to lock monitor 0x00007f61e4293208 (object 0x00000000f0ee2b60, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-18"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-18":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee2b50> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee2b60> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-17":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee2b60> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee2b50> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-16":
+  waiting to lock monitor 0x00007f61e4291c08 (object 0x00000000f0ee2e90, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-15"
+"Thread-15":
+  waiting to lock monitor 0x00007f61bc00d5d8 (object 0x00000000f0ee2ea0, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-16"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-16":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee2e90> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee2ea0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-15":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee2ea0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee2e90> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-14":
+  waiting to lock monitor 0x00007f61bc00c088 (object 0x00000000f0ee31d0, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-13"
+"Thread-13":
+  waiting to lock monitor 0x00007f61bc00aa88 (object 0x00000000f0ee31e0, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-14"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-14":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee31d0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee31e0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-13":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee31e0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee31d0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-12":
+  waiting to lock monitor 0x00007f61bc009488 (object 0x00000000f0ee3510, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-11"
+"Thread-11":
+  waiting to lock monitor 0x00007f61b003be28 (object 0x00000000f0ee3520, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-12"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-12":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee3510> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee3520> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-11":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee3520> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee3510> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-10":
+  waiting to lock monitor 0x00007f61b003a8d8 (object 0x00000000f0ee3850, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-9"
+"Thread-9":
+  waiting to lock monitor 0x00007f61b00392d8 (object 0x00000000f0ee3860, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-10"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-10":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee3850> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee3860> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-9":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee3860> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee3850> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found one Java-level deadlock:
+=============================
+"Thread-8":
+  waiting to lock monitor 0x00007f61b0037cd8 (object 0x00000000f0ee3b90, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-7"
+"Thread-7":
+  waiting to lock monitor 0x00007f61c80062c8 (object 0x00000000f0ee3ba0, a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator),
+  which is held by "Thread-8"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-8":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee3b90> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee3ba0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$1(DeadlockServlet.java:42)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$11/581224939.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+"Thread-7":
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.deadlock(DeadlockServlet.java:34)
+	- waiting to lock <0x00000000f0ee3ba0> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator.emulate(DeadlockServlet.java:30)
+	- locked <0x00000000f0ee3b90> (a com.epam.nix.java.testapp.servlet.DeadlockServlet$DeadlockEmulator)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet.lambda$doPost$0(DeadlockServlet.java:41)
+	at com.epam.nix.java.testapp.servlet.DeadlockServlet$$Lambda$10/1519336256.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found 17 deadlocks.
+

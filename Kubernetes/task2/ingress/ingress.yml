@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: author-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+
+
+spec:
+  rules:
+  - host: my-application.k8s.local
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: flask-svc
+          servicePort: 80
+      - path: /author
+        backend:
+          serviceName: author-svc
+          servicePort: 80
+

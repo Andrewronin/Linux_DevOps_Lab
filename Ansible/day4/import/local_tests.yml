@@ -1,0 +1,20 @@
+- name: Local tests
+  hosts: localhost
+
+  tasks:
+  - name: test Apache
+    uri:
+      url: "http://{{item}}:80/"
+      return_content: yes
+    register: webpage
+    with_items: "{{groups['webservers']}}"
+    failed_when: "'Hello' not in webpage.content"
+
+
+  - name: test tomcat
+    uri:
+      url: "http://{{item}}:8080/"
+      return_content: yes
+    register: webpage2
+    with_items: "{{groups['appservers']}}"
+    failed_when: "'Tomcat' not in webpage2.content"

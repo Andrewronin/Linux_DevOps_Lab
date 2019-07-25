@@ -1,0 +1,4 @@
+dependencies:
+  - role: java
+    java_version: "{{tomcat_java_version}}"
+  

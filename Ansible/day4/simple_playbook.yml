@@ -1,0 +1,27 @@
+- name: simple playbook for block
+  hosts: localhost
+  tasks:
+  - debug: msg="we start from here"
+
+  - block:
+    - debug: msg="we moved to the block"
+    - fail: msg="we've got a fail"
+    rescue:
+    - debug: msg="and we rescued it :)"
+    always:
+    - debug: msg="I can close doors, which were opened"
+
+  - debug: msg="we trying again"
+
+  - block:
+    - debug: msg="we moved to the block again"
+    - fail: msg="we've got a fail again"
+    rescue:
+    - fail: msg="but we could't rescue it this time and we fall"
+    always:
+    - debug: msg="Turn off the light"
+    
+  - debug: msg="I'll never be played ... :'("
+
+
+

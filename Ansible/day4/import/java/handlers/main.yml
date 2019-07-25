@@ -1,0 +1,9 @@
+# handlers for java
+- name: export java results
+  become: yes
+  copy: 
+    content: >
+      {
+        "version": "{{ java_version }}"
+      }
+    dest: /etc/ansible/facts.d/java.fact

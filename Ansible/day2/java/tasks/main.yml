@@ -1,0 +1,9 @@
+---
+# tasks file for java
+
+- name: Install OpenJDK
+  become: yes
+  yum: 
+    name: java-{{ java_version }}-openjdk
+  register: java_output
+

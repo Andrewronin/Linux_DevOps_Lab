@@ -1,0 +1,15 @@
+- import_playbook: /home/student/ansible/day5/docker-install.yml
+  tags:
+  - always
+- import_playbook: /home/student/ansible/day3/playbook.yml
+  tags:
+  - provision
+
+- import_playbook: /home/student/ansible/day5/test_playbook.yml
+  tags:
+  - test 
+
+- import_playbook: /home/student/ansible/day5/docker-remove.yml
+  tags:
+  - never
+  - destroy

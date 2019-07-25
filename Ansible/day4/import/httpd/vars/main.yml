@@ -1,0 +1,4 @@
+---
+# vars file for httpd
+
+httpd_fact: "{{ hostvars[groups['webservers'][0]].ansible_local.httpd.version | default('') }}"

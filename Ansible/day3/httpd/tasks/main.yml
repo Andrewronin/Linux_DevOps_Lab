@@ -1,0 +1,18 @@
+---
+# tasks file for httpd
+- name: Checking httpd
+  block:
+  - name: Install httpd
+    become: yes
+    yum:
+      name: httpd
+      state: latest
+    register: httpd_output
+
+  - name: enable httpd service
+    become: yes
+    systemd:
+      name: httpd
+      state: started
+      enabled: yes
+  when: httpd_fact == ''

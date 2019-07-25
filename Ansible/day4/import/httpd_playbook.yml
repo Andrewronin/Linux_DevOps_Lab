@@ -1,0 +1,7 @@
+- name: Provision httpd
+  hosts: webservers
+  
+  roles:
+  - role: httpd
+  - role: httpd_tomcat
+  

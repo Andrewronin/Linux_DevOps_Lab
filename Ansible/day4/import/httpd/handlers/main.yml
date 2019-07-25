@@ -1,0 +1,17 @@
+
+- name: export httpd version
+  shell: /usr/sbin/httpd -version | grep Apache | sed 's/[^0-9._]//g'
+  register: httpd_version
+  listen: export httpd results
+
+
+- name: export httpd to file 
+  listen: export httpd results
+  become: yes
+  copy: 
+    content: >
+      {
+        "version": "{{ httpd_version.stdout }}"
+      }
+    dest: /etc/ansible/facts.d/httpd.fact
+

@@ -1,0 +1,26 @@
+---
+# tasks file for httpd
+
+- name: Install nginx
+  become: yes
+  yum:
+    name: nginx
+    state: latest
+  register: nginx_output
+
+- name: Copy index.html
+  template: 
+    src: files/index.j2
+    dest: /usr/share/nginx/html/index.html
+  become: yes
+
+- name: enable nginx service
+  become: yes
+  systemd:
+    name: nginx
+    state: restarted
+    enabled: yes
+
+
+
+

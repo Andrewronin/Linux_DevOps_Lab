@@ -1,0 +1,13 @@
+- name: Remote tests
+  hosts: webservers
+
+  roles:
+  - role: test
+    test: httpd
+
+- name: Remote tests
+  hosts: appservers
+
+  roles:
+  - role: test
+    test: tomcat

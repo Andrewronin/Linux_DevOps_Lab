@@ -1,0 +1,10 @@
+[webservers]
+1.2.3.4
+
+[appservers]
+1.2.3.5
+
+[all:vars]
+ansible_connection=ssh
+ansible_user=vagrant
+

@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dind-host-deploy
+  labels:
+    app: dind
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dind
+  template:
+    metadata:
+      labels:
+        app: dind
+    spec:
+      containers:
+      - name: dind
+        image: docker:dind
+        command: ["sleep", "1000"]
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - mountPath: /var/run/docker.sock
+          name: docker-socket-volume
+      volumes:
+        - name: docker-socket-volume
+          hostPath:
+            path: /var/run/docker.sock
+
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: dind-svc
+  labels:
+    app: dind
+spec:
+  ports:
+  - port: 80
+    targetPort: 4444
+  selector:
+    app: dind
+  type: LoadBalancer
+
+
+
+

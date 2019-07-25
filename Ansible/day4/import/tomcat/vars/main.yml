@@ -1,0 +1,5 @@
+---
+# defaults file for tomcat
+tomcat_download_url: "http://ftp.byfly.by/pub/apache.org/tomcat/tomcat-{{tomcat_version.split('.')[0]}}/v{{tomcat_version}}/bin/apache-tomcat-{{tomcat_version}}.tar.gz"
+tomcat_path: "{{tomcat_prepath}}apache-tomcat-{{tomcat_version}}/"
+tomcat_fact: "{{ hostvars[groups['appservers'][0]].ansible_local.tomcat.version | default('') }}"

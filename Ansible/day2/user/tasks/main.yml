@@ -1,0 +1,50 @@
+---
+# tasks file for user
+- name: Create group with default id
+  group:
+    name: "{{user_group}}"
+    state: present
+  become: yes
+  when: group_id == ""
+
+- name: Create group with non-default id
+  group:
+    name: "{{user_group}}"
+    state: present
+    gid: "{{group_id}}"
+  become: yes
+  when: group_id != ""
+
+- name: Create user with default id
+  user:
+    name: "{{user_name}}"
+    group: "{{user_group}}"
+    append: yes
+  become: yes
+  when: user_id == ""
+
+- name: Create user with non-default id
+  user:
+    name: "{{user_name}}"
+    group: "{{user_group}}"
+    append: yes
+    uid: "{{user_id}}"
+  become: yes
+  when: user_id != "" 
+
+- name: Set authorized key taken from file
+  authorized_key:
+    user: "{{user_name}}"
+    state: present
+    key: "{{user_auth_key}}"
+  when: user_auth_key != ""
+  become: yes
+
+- name: Add user to the sudoers
+  copy:
+    dest: "/etc/sudoers.d/{{user_name}}"
+    content: "{{user_priv}}"
+    backup: yes
+    validate: /usr/sbin/visudo -cf %s
+  when: user_priv != ""
+  become: yes

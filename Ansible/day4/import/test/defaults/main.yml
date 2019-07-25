@@ -1,0 +1,5 @@
+#Default for tests
+
+java_fact: "{{ hostvars[groups['appservers'][0]].ansible_local.java.version | default('') }}"
+tomcat_fact: "{{ hostvars[groups['appservers'][0]].ansible_local.tomcat.version | default('') }}"
+httpd_fact: "{{ hostvars[groups['webservers'][0]].ansible_local.httpd.version | default('') }}"

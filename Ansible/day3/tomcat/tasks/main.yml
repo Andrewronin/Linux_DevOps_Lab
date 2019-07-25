@@ -1,0 +1,45 @@
+---
+# tasks file for tomcat
+
+- name: Checking tomcat facts
+  block:
+
+  - name: Download Tomcat
+    become: yes
+    get_url:
+      url: "{{tomcat_download_url}}"
+      dest: "{{tomcat_prepath}}tomcat.tar.gz"
+
+  - name: Unpack Tomcat
+    become: yes
+    unarchive: 
+      src: "{{tomcat_prepath}}tomcat.tar.gz"
+      dest: "{{tomcat_prepath}}"
+      owner: "{{tomcat_user}}"
+      group: "{{tomcat_group}}"
+      remote_src: yes
+      creates: "{{tomcat_path}}/bin"
+    register: tomcat_output
+
+  - name: Systemd file for Tomcat
+    become: yes
+    template:
+      src: template/tomcat.j2
+      dest: "/usr/lib/systemd/system/tomcat.service"
+    notify: systemd daemon reload
+
+  - name: Download sample.war
+    become: yes
+    get_url:
+      url: "https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war"
+      dest: "{{tomcat_path}}/webapps/"
+      owner: "{{tomcat_user}}"
+      group: "{{tomcat_group}}"
+
+  - name: Start Tomcat
+    become: yes
+    service: 
+      name: tomcat
+      state: started
+
+  when: tomcat_version != tomcat_fact

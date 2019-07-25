@@ -1,0 +1,14 @@
+<VirtualHost *:*>
+    ProxyPreserveHost On
+    ProxyPass        "/" "balancer://sample"
+
+<Proxy "balancer://sample">
+{% for host in groups['appservers'] %}
+
+    BalancerMember "http://{{ hostvars[host]['ansible_eth1']['ipv4']['address'] }}:8080/sample/"
+
+{% endfor %}
+</Proxy>
+
+</VirtualHost>
+

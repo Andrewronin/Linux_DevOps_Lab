@@ -1,0 +1,11 @@
+- hosts: localhost
+  post_tasks:
+  - name: remove container
+    docker_container:
+      name: "{{hostvars[item].ansible_host}}"
+      state: absent
+    with_items: "{{ groups['webservers'] + groups['appservers']}}"
+    tags: 
+    - never
+    - destroy
+

@@ -1,0 +1,5 @@
+<VirtualHost *:*>
+    ProxyPreserveHost On
+    ProxyPass        "/" "http://{{ hostvars[groups['appservers'][0]].ansible_eth0.ipv4.address }}:8080/sample/"
+    ProxyPassReverse "/" "http://{{ hostvars[groups['appservers'][0]].ansible_eth0.ipv4.address }}:8080/sample/"
+</VirtualHost>

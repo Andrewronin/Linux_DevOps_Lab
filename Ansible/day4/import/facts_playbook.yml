@@ -1,0 +1,10 @@
+- name: Creating Facts Directory
+  hosts: all
+  gather_facts: yes
+  tasks:
+  - name: Creating Facts Directory
+    become: yes
+    file:
+      path: /etc/ansible/facts.d
+      recurse: yes
+      state: directory

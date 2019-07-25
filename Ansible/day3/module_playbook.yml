@@ -1,0 +1,14 @@
+- hosts: localhost
+
+  tasks:
+  - name: Test my module
+    custom_module:
+      #process: java
+      #port: 6942
+      content_url: "http://1.2.3.5:8080/"
+      content_regexp: "Tomc.t"
+      #header_url: "http://1.2.3.4/"
+      #header_regexp: "Apache"
+    register: output
+
+  - debug: var=output

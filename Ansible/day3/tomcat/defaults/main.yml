@@ -1,0 +1,8 @@
+---
+# defaults file for tomcat
+tomcat_user: tomcat
+tomcat_group: "{{tomcat_user}}"
+tomcat_version: "8.5.42"
+tomcat_prepath: "/opt/"
+tomcat_java_version: "12.0.2"
+

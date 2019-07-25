@@ -1,0 +1,9 @@
+---
+# tasks file for httpd_tomcat
+
+- name: Copy Vhost tomcat.conf to httpd
+  become: yes
+  template: 
+    src: template/tomcat.j2
+    dest: /etc/httpd/conf.d/tomcat.conf
+  notify: restart apache

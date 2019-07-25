@@ -1,0 +1,57 @@
+- name: Provision tomcat
+  hosts: appservers
+  become: yes
+  
+  tasks:
+  - name: install tomcat    
+    yum:
+      name: tomcat
+      state: latest
+
+  - name: enable service
+    systemd:
+      name: tomcat
+      state: started
+      enabled: yes
+
+  - name: Download foo.conf
+    get_url:
+      url: https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
+      dest: /usr/share/tomcat/webapps/
+
+
+
+- name: Provision httpd
+  hosts: webservers
+  become: yes
+
+  tasks:
+  - name: Install httpd
+    yum:
+      name: httpd
+      state: latest
+
+  - name: Copy Vhost config
+    template: 
+      src: tomcat.j2
+      dest: /etc/httpd/conf.d/
+    notify: restart apache
+
+#  - name: Copy Vhost config
+#    copy: 
+#      src: tomcat.conf
+#      dest: /etc/httpd/conf.d/
+#      validate: 'apachectl -t -f %s'
+#    notify: restart apache
+
+  - name: enable service
+    systemd:
+      name: httpd
+      state: started
+      enabled: yes
+
+  handlers:
+  - name: restart apache
+    service:
+      name: httpd
+      state: restarted
