@@ -1,0 +1,60 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: sonar-pv-volume1
+  labels:
+    type: local
+    app: sonar
+spec:
+  storageClassName: sonar-storage
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/sonar"
+
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: sonar-pv-volume2
+  labels:
+    type: local
+    app: sonar
+spec:
+  storageClassName: ext-storage
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/ext"
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: sonar-data
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: sonar-storage
+  resources:
+    requests:
+      storage: 2Gi
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: sonar-extensions
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: ext-storage
+  resources:
+    requests:
+      storage: 2Gi

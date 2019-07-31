@@ -1,0 +1,99 @@
+- name: Jenkins topic 2
+  hosts: localhost
+
+  tasks:
+  - name: Add host 1.2.3.4 to in-memory inventory
+    add_host:
+      name: '1.2.3.4'
+      groups: jenkins
+
+- name: start provision
+  hosts: jenkins
+
+  vars:
+    maven_url: "http://ftp.byfly.by/pub/apache.org/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz"
+    maven_path: "/opt/maven/"
+    
+    gradle_url: "https://services.gradle.org/distributions/gradle-5.5.1-all.zip"
+    gradle_path: "/opt/gradle/"
+
+
+  tasks:
+
+  - debug: msg="Install Maven"
+
+
+
+  - name: Create maven directory
+    file:
+      path: "{{ maven_path }}"
+      state: directory
+      recurse: yes
+    become: yes
+
+  - name: Download maven url
+    unarchive:
+      src: "{{ maven_url }}"
+      dest: "{{ maven_path }}"
+      remote_src: yes
+      extra_opts:
+      - --strip-components=1
+    become: yes
+
+  - name: Add Maven path to system-wide $PATH.
+    copy:
+      dest: /etc/profile.d/maven.sh
+      content: 'PATH=$PATH:{{ maven_path }}/bin'
+    become: yes
+
+  - name: Test maven
+    command: mvn -v
+    register: maven_output
+
+
+  - debug: msg="Install Gradle"
+
+  - name: Create Gradle directory
+    file:
+      path: "{{ gradle_path }}"
+      state: directory
+      recurse: yes
+    become: yes
+
+
+  - name: Download gradle url
+    unarchive:
+      src: "{{ gradle_url }}"
+      dest: "{{ gradle_path }}"
+      remote_src: yes
+    register: gradle_zip
+    no_log: True
+    become: yes 
+
+  - name: Block unzip cleanup
+    block:
+    - name: move content
+      copy:
+        src: "{{ gradle_path }}gradle-5.5.1/"
+        dest: "{{ gradle_path }}"
+        remote_src: yes
+      become: yes
+
+    - name: clean content
+      file:
+        path: "{{ gradle_path }}gradle-5.5.1/"
+        state: absent
+      become: yes
+
+    when: gradle_zip.changed == true
+
+  - name: Add Gradle path to system-wide $PATH.
+    copy:
+      dest: /etc/profile.d/gradle.sh
+      content: 'PATH=$PATH:{{ gradle_path }}/bin'
+    become: yes
+
+  - name: Test gradle
+    command: gradle -v
+    register: gradle_output
+

@@ -1,0 +1,23 @@
+- name: Apavarnitsyn playbook
+  hosts: all
+
+  roles:
+
+  - role: user
+    user_name: jenkins
+    user_priv: " jenkins  ALL=(ALL)  NOPASSWD: ALL \n Defaults: jenkins !requiretty \n"
+    user_auth_key: 
+    - "/home/student/.ssh/devops.pub"
+    - "/home/student/.ssh/id_rsa.pub"
+
+  - role: java
+
+  tasks:
+  - name: creating jenkins_path
+    file:
+      path: "/opt/jenkins/"
+      owner: jenkins
+      group: jenkins
+      recurse: yes
+      state: directory
+    become: yes
