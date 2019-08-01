@@ -1,0 +1,29 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: nexus-pv-volume
+  labels:
+    type: local
+    app: nexus
+spec:
+  storageClassName: nexus-storage
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/nexus"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: nexus-pv-claim
+  labels:
+    app: nexus
+spec:
+  storageClassName: nexus-storage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi

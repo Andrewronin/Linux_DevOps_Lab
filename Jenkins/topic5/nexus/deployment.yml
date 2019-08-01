@@ -1,0 +1,35 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nexus
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nexus
+    spec:
+      containers:
+        - name: nexus
+          image: sonatype/nexus3:latest
+          # env:
+          # - name: MAX_HEAP
+          #   value: "800m"
+          # - name: MIN_HEAP
+          #   value: "300m"
+          # resources:
+          #   limits:
+          #     memory: "4Gi"
+          #     cpu: "1000m"
+          #   requests:
+          #     memory: "2Gi"
+          #     cpu: "500m"
+          ports:
+            - containerPort: 8081
+          volumeMounts:
+            - mountPath: /sonatype-work
+              name: nexus-mnt
+      volumes:
+        - name: nexus-mnt
+          persistentVolumeClaim:
+            claimName: nexus-pv-claim

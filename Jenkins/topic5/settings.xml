@@ -1,0 +1,43 @@
+<settings>
+  <mirrors>
+    <mirror>
+      <!--This sends everything else to /public -->
+      <id>central-proxy</id>
+      <mirrorOf>central</mirrorOf>
+      <url>http://192.168.56.242:8081/repository/maven-proxy/</url>
+    </mirror>
+    <mirror>
+      <!--This sends everything else to /public -->
+      <id>jboss-enterprise</id>
+      <mirrorOf>jboss-enterprise-maven-repository</mirrorOf>
+      <url>http://192.168.56.242:8081/repository/nexus-jboss-enterprise-maven-repository/</url>
+    </mirror>    
+    <mirror>
+      <!--This sends everything else to /public -->
+      <id>jboss-public</id>
+      <mirrorOf>jboss-public-repository-group</mirrorOf>
+      <url>http://192.168.56.242:8081/repository/nexus-jboss-public-repository-group/</url>
+    </mirror>    
+    
+  </mirrors>
+  <profiles>
+    <profile>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>http://central</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+      </repositories>
+     <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>http://central</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+</settings>
