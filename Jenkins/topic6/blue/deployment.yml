@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: tomcat-blue
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: tomcat-blue
+    spec:
+      containers:
+        - name: tomcat-blue
+          image: 192.168.56.242:8082/tomcat
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: regcred
+        
