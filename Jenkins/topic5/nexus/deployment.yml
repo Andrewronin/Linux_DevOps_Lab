@@ -25,7 +25,10 @@ spec:
           #     memory: "2Gi"
           #     cpu: "500m"
           ports:
-            - containerPort: 8081
+          - containerPort: 8081
+            name: http
+          - containerPort: 8082
+            name: docker
           volumeMounts:
             - mountPath: /sonatype-work
               name: nexus-mnt
