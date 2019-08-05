@@ -18,7 +18,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
   local:
-    path: /opt/jenkins/
+    path: /mnt/jenkins
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
@@ -30,5 +30,5 @@ spec:
   storageClassName: local-storage
   resources:
     requests:
-      storage: 2Gi
+      storage: 5Gi
 

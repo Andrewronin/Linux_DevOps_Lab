@@ -6,7 +6,8 @@ Vagrant.configure("2") do |config|
     m1.ssh.insert_key = false
     m1.vm.provider "virtualbox" do |vb|
       vb.name = "master"
-      vb.memory = "4096"
+      vb.memory = "2096"
+      vb.cpus = "6"
       end
     m1.vm.provision "shell", path: "docker.sh"
     m1.vm.provision "shell", path: "2_1.sh"
@@ -21,7 +22,8 @@ Vagrant.configure("2") do |config|
     m2.ssh.insert_key = false
     m2.vm.provider "virtualbox" do |vm|
       vm.name = "worker"
-      vm.memory = "4096"
+      vm.memory = "6128"
+      vm.cpus = "6"
       end
     m2.vm.provision "shell", path: "docker.sh"
     m2.vm.provision "shell", path: "2_1.sh"

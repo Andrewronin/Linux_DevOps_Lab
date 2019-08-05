@@ -22,7 +22,7 @@ spec:
           name: jnlp
         volumeMounts:
         - name: pod-volumes-localvolume-volume
-          mountPath: /opt/
+          mountPath: /var/jenkins_home
         livenessProbe:
           httpGet:
             path: /login
